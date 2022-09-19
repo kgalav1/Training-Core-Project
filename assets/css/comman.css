@@ -1,0 +1,155 @@
+.dataTables_wrapper .dataTables_filter input {
+    padding: 2px;
+    padding-left: 12px;
+    outline: none;
+}
+
+.dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.formerror {
+    color: #d32525;
+    font-size: 10px;
+    /* font-weight: bolder; */
+}
+
+.seprate {
+    margin-top: 40px;
+    height: 10px;
+    width: 100%;
+    background-color: black;
+}
+
+.absolute {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.drop {
+    display: block;
+    width: 260.66px;
+    height: 2.4rem;
+    font-family: inherit;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.uppar {
+    height: 180px;
+    display: flex;
+    align-items: center;
+
+}
+
+.width {
+    width: 70%;
+}
+
+.bremove {
+    border: none;
+    background: none;
+}
+
+.image{
+    height: 80px;
+    width: 80px;
+}
+
+.mybox {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.imageitem{
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+}
+
+.preview{
+    position: relative;
+    height: 85px;
+    width: 85px;
+    left: 995px;
+    top: 10px;
+}
+
+.hero {
+    display: flex;
+}
+
+
+
+.hero .dynamic-txts {
+    height: 30px;
+    overflow: hidden;
+    margin-bottom: 3px;
+    padding-bottom: 10px;
+}
+
+.dynamic-txts li {
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: 4px;
+    margin-right: 30px;
+    animation: slide 12s steps(1) infinite;
+    /*animation-fill-mode: backwards;*/
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.dynamic-txts li span {
+    position: relative;
+ }
+
+.dynamic-txts li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #212529;
+    border-left: 2px solid #16f37d;
+    animation: typing 4s steps(12) 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 10px);
+    }
+
+    100% {
+        left: 330px;
+    }
+}
+.table-container{
+    overflow-y: scroll;
+    max-height: 310px;
+    min-height: 310px;
+}
+.InputSearch{
+    position: relative;
+}
+
+.eyepsignup {
+    position: absolute;
+    right: 10px;
+    top: 17%;
+    color: black;
+}
+  

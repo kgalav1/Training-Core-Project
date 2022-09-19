@@ -1,0 +1,13 @@
+{
+    "name": "Overlay",
+    "version": "1.0.0",
+    "main": "dist/Overlay.min.css",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
