@@ -292,7 +292,7 @@ if (!isset($_SESSION['name'])) {
                                                             </td>
                                                             <td><input type='number' class="itemquantity"
                                                                     id='itemquantity_1' value="" name='itemquantity[]'
-                                                                    min="0" style="text-align: right;"></td>
+                                                                    min="1" style="text-align: right;"></td>
                                                             <td><input type='text' class="itemamount" id="itemamount_1"
                                                                     name='itemamount[]' dir="rtl" readonly></td>
                                                             <td><button type='button' class='bremove d-none'
@@ -653,7 +653,7 @@ if (!isset($_SESSION['name'])) {
                 index +
                 "' placeholder='Enter Item Name' onkeypress='itemsearch()'></td><td><input type='text' class='itemprice' name='itemprice[]' id='itemprice_" +
                 index +
-                "' dir='rtl' readonly></td><td><input type='number' class='itemquantity' min='0' name='itemquantity[]' id='itemquantity_" +
+                "' dir='rtl' readonly></td><td><input type='number' class='itemquantity' min='1' name='itemquantity[]' id='itemquantity_" +
                 index +
                 " .'style='text-align: right;''.'></td><td><input type='text' class='itemamount' name='itemamount[]' id='itemamount_" +
                 index +

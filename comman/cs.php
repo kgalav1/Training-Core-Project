@@ -34,19 +34,19 @@ if ($_POST["action"] == "user") {
 
 
     if ($cs->total_rows($total) > 0) {
-        
+
         $total_records = $cs->total_rows($total);
         $total_page = ceil($total_records / $limit);
         // if($total_records <= $limit)
-        
-        
+
+
         if ($cs->total_rows($search) > 0) {
             $sno = 1;
             $currentNumber = ($page - 1) * $limit + $sno;
             while ($row = mysqli_fetch_assoc($searchresult)) {
-                $sno = $sno+1;
+                $sno = $sno + 1;
                 $output .= "<tr>
-                    <td>". $currentNumber++ ."</td>
+                    <td>" . $currentNumber++ . "</td>
                     <td onclick = 'userEdit(" . $row['sno'] . ");' style='cursor:pointer;'>" . $row['name'] . "</td>
                     <td>" . $row['email'] . "</td>
                     <td>" . $row['phone'] . "</td>
@@ -58,12 +58,12 @@ if ($_POST["action"] == "user") {
             $output .= "<tr><td colspan='5' style='text-align:center;'>NO DATA FOUND</td></tr>";
         }
 
-       
 
-           $pagin .= '<div id="pagi">
+
+        $pagin .= '<div id="pagi">
            <nav aria-label="Page navigation example">
            <ul class="pagination justify-content-end">
-           <li class="me-3 mt-1 fw-500">Showing '.$offset+'1'.' -'.$offset+$count_row.' records out of '.$total_records.'</li>';
+           <li class="me-3 mt-1 fw-500">Showing ' . ($offset + 1) . ' - ' . ($offset + $count_row) . ' records out of ' . $total_records . '</li>';
 
         for ($i = 1; $i <= $total_page; $i++) {
             if ($i == $page) {
@@ -109,8 +109,8 @@ if ($_POST["action"] == "client") {
 
         $total_records = $cs->total_rows($total);
         $total_page = ceil($total_records / $limit);
-        
-        
+
+
         if ($cs->total_rows($search) > 0) { // To Check custom record from database
             $sno = 1;
             $currentNumber = ($page - 1) * $limit + $sno;
@@ -119,7 +119,7 @@ if ($_POST["action"] == "client") {
                 $sno = $sno + 1;
 
                 $output .= "<tr>
-            <td>". $currentNumber++ ."</td>
+            <td>" . $currentNumber++ . "</td>
             <td onclick = 'clientEdit(" . $row['sno'] . ");' style='cursor:pointer;'>" . $row['client_name'] . "</td>
             <td>" . $row['email'] . "</td>
             <td>" . $row['phone'] . "</td>
@@ -134,11 +134,11 @@ if ($_POST["action"] == "client") {
             $output .= "<tr><td colspan='8' style='text-align:center;'>NO DATA FOUND</td></tr>";
         }
 
-        
+
         $pagin .=    '<div id="pagi">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-end">
-                    <li class="me-3 mt-1 fw-500">Showing '.$offset+'1'.' -'.$offset+$count_row.' records out of '.$total_records.'</li>';
+                    <li class="me-3 mt-1 fw-500">Showing ' . ($offset + 1) . ' - ' . ($offset + $count_row) . ' records out of ' . $total_records . '</li>';
 
         for ($i = 1; $i <= $total_page; $i++) {
             if ($i == $page) {
@@ -180,17 +180,17 @@ if ($_POST["action"] == "item") {
         $total_records = $cs->total_rows($total);
         $total_page = ceil($total_records / $limit);
         $count_row = $cs->total_rows($search);
-        
-        
+
+
         if ($cs->total_rows($search) > 0) { // To Check custom record from database
             $sno = 1;
             $currentNumber = ($page - 1) * $limit + $sno;
 
             while ($row = mysqli_fetch_assoc($searchresult)) {
-                $sno = $sno+1;
+                $sno = $sno + 1;
 
                 $output .= "<tr>
-        <td>".$currentNumber++."</td>
+        <td>" . $currentNumber++ . "</td>
         <td onclick = 'itemEdit(" . $row['sno'] . ");' style='cursor:pointer;'>" . $row['name'] . "</td>
         <td>" . $row['desc'] . "</td>
         <td>" . $row['price'] . "</td>
@@ -206,7 +206,7 @@ if ($_POST["action"] == "item") {
         $pagin .= '<div id="pagi">
                 <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
-                <li class="me-3 mt-1 fw-500">Showing '.$offset+'1'.' -'.$offset+$count_row.' records out of '.$total_records.'</li>';
+                <li class="me-3 mt-1 fw-500">Showing ' . ($offset + 1) . ' - ' . ($offset + $count_row) . ' records out of ' . $total_records . '</li>';
 
         for ($i = 1; $i <= $total_page; $i++) {
             if ($i == $page) {
@@ -261,11 +261,11 @@ if ($_POST["action"] == "invoice") {
         if ($cs->total_rows($search) > 0) { // To Check custom record from database
             $sno = 1;
             $currentNumber = ($page - 1) * $limit + $sno;
-            
+
             while ($row = mysqli_fetch_assoc($searchresult)) {
                 $sno = $sno + 1;
 
-        $output .= "<tr>
+                $output .= "<tr>
         <td>" . $row['invoice_id'] . "</td>
         <td onclick = 'invoiceEdit(" . $row['invoice_id'] . ");' style='cursor:pointer;'>" . $row['client_name'] . "</td>
         <td>" . $row['email'] . "</td>
@@ -280,11 +280,10 @@ if ($_POST["action"] == "invoice") {
         } else {
             $output .= "<tr><td colspan='10' style='text-align:center;'>NO DATA FOUND</td></tr>";
         }
-
         $pagin .= '<div id="pagi">
             <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-end">
-            <li class="me-3 mt-1 fw-500">Showing '.$offset+'1'.' -'.$offset+$count_row.' records out of '.$total_records.'</li>';
+            <li class="me-3 mt-1 fw-500">Showing ' . ($offset + 1) . ' - ' . ($offset + $count_row) . ' records out of ' . $total_records . '</li>';
 
         for ($i = 1; $i <= $total_page; $i++) {
             if ($i == $page) {
